@@ -9,3 +9,7 @@ set_input_delay –max 2.1 [remove_from_collection [all_inputs] [get_ports "clk"
 set_output_delay –max 2.1 [all_outputs]
 set_driving_cell -max -lib_cell NbufferFX2_LVT [all_inputs]
 set_load -max 10 [all_outputs]
+
+create_die_area -coordinate {0 0 360 270}
+set_cell_location -coordinate imem {0 0}
+set_cell_location -coordinate dmem {110 0}
